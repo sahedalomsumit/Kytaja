@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <select id="selectbbe">
+            <option value="select">select</option>
+            <option value="a">a</option>
+            <option value="b">b</option>
+            <option value="c">c</option>
+            <option value="d">d</option>
+        </select>
+        <br>
+        <input type="checkbox" name="Hi" id="">
+        <label for="Hi">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure tempore quasi tenetur ipsa unde
+            ipsam earum reprehenderit molestiae eligendi ullam!</label><br>
+    </form>
+    <!-- // // Get a reference to the select element and the checkbox label.
+    // var selectElement = document.getElementById("selectbbe");
+    // var checkboxLabel = document.querySelector("label[for='Hi']");
+
+    // // Add an event listener to the select element.
+    // selectElement.addEventListener("change", function () {
+    //     // Check the selected index.
+    //     var selectedIndex = selectElement.selectedIndex;
+
+    //     // Check if the selected index is 0, 1, or 2.
+    //     if (selectedIndex >= 0 && selectedIndex <= 2) {
+    //         // Hide the checkbox label.
+    //         checkboxLabel.style.display = "none";
+    //     } else {
+    //         // Show the checkbox label for other options.
+    //         checkboxLabel.style.display = "block";
+    //     }
+    // });
+
+    // Get a reference to the select element and the checkbox label. -->
+    <script>
+        var selectElement = document.querySelector(".selectPackage");
+        var openingDisclaimer = document.querySelector(".openingDisclaimer");
+        var closingDisclaimer = document.querySelector(".closingDisclaimer");
+
+        // Add an event listener to the select element.
+        selectElement.addEventListener("change", function () {
+            // Check the selected index.
+            var selectedIndex = selectElement.selectedIndex;
+
+            // Check if the selected index is 0, 1, or 2.
+            if (selectedIndex >= 0 && selectedIndex <= 2) {
+                // Hide the checkbox label.
+                closingDisclaimer.style.display = "none";
+            } else {
+                // Show the checkbox label for other options.
+                openingDisclaimer.style.display = "none";
+            }
+        });
+
+        var selectElement = document.querySelector(".selectPackage");
+        var openingDisclaimer = document.querySelector(".openingDisclaimer");
+        var closingDisclaimer = document.querySelector(".closingDisclaimer");
+
+        var element = document.getElementById("fieldname11_1"); // Replace with the actual ID or selector of your element.
+        element.classList.remove("required");
+        var element = document.getElementById("fieldname9_1"); // Replace with the actual ID or selector of your element.
+        element.classList.remove("required");
+
+        closingDisclaimer.removeAttribute("required");
+        openingDisclaimer.removeAttribute("required");
+        closingDisclaimer.style.display = "none";
+        // Add an event listener to the select element.
+        selectElement.addEventListener("change", function () {
+            // Reset the display property for both disclaimer elements.
+
+            // Check the selected index.
+            var selectedIndex = selectElement.selectedIndex;
+
+            // Apply the new condition based on the selected index.
+            if (selectedIndex >= 0 && selectedIndex <= 2) {
+                // Show the openingDisclaimer
+                openingDisclaimer.style.display = "block";
+            } else {
+                // Show the closingDisclaimer
+                openingDisclaimer.style.display = "none";
+                closingDisclaimer.style.display = "block";
+            }
+        });
+
+    </script>
+</body>
+
+</html>
